@@ -18,4 +18,10 @@ public class PatientContactInfoService {
         PatientContactInfoDto patientContactInfoDto = patientContactInfoMapper.patientContactInfoToPatientContactInfoDto(patient);
         return patientContactInfoDto;
     }
+
+    public void updatePatientContactInfoById(String idCode, PatientContactInfoDto patientContactInfo) {
+
+
+
+    }
 }
