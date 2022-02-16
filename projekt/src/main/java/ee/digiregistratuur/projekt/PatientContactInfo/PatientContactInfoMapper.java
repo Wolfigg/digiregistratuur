@@ -10,4 +10,12 @@ public interface PatientContactInfoMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updatePatientContactInfoFromPatientContactInfoDto(PatientContactInfoDto patientContactInfoDto, @MappingTarget PatientContactInfo patientContactInfo);
+
+    PatientContactInfo patientContactInfoDto1ToPatientContactInfo(PatientContactInfoDtoRequest patientContactInfoDto1);
+
+    PatientContactInfoDtoRequest patientContactInfoToPatientContactInfoDto1(PatientContactInfo patientContactInfo);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    void updatePatientContactInfoFromPatientContactInfoDtoRequest(PatientContactInfoDtoRequest patientContactInfoDtoRequest, @MappingTarget PatientContactInfo patientContactInfo);
 }
+

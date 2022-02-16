@@ -25,9 +25,8 @@ public class PatientContactInfoController {
     @PutMapping("/update/by/id/code")
     @Operation(summary = "Uuendab kontaktandmeid isikukoodi järgi")
     public RequestResponse updatePatientContactInfoById(@RequestParam String idCode,
-                                                        @RequestBody PatientContactInfoDto patientContactInfo) {
-        patientContactInfoService.updatePatientContactInfoById(idCode, patientContactInfo);
-
-        return null;
+                                                        @RequestBody PatientContactInfoDtoRequest patientContactInfoDtoRequest) {
+        RequestResponse response = patientContactInfoService.updatePatientContactInfoById(idCode, patientContactInfoDtoRequest);
+        return response;
     }
 }
