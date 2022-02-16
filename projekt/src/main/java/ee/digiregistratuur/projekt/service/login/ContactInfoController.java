@@ -1,6 +1,7 @@
 package ee.digiregistratuur.projekt.service.login;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,9 @@ public class ContactInfoController {
 
     @GetMapping("/contact/info")
     public ContactInfoResponse getContactInfoByIdCode(@RequestParam String idCode) {
-       ContactInfoResponse response = contactInfoService.getContactInfoByIdCode(idCode);
+        ContactInfoResponse response = contactInfoService.getContactInfoByIdCode(idCode);
         return response;
     }
+
+
 }
