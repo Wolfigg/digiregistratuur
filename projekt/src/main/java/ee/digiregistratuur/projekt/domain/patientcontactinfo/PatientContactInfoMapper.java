@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.domain.patientContactInfo;
+package ee.digiregistratuur.projekt.domain.patientcontactinfo;
 
 import ee.digiregistratuur.projekt.service.login.ContactInfoResponse;
 import ee.digiregistratuur.projekt.service.updatecontact.UpdateContactRequest;

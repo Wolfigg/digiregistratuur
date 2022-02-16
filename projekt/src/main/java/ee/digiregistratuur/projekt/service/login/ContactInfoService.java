@@ -1,8 +1,8 @@
 package ee.digiregistratuur.projekt.service.login;
 
-import ee.digiregistratuur.projekt.domain.patientContactInfo.PatientContactInfo;
-import ee.digiregistratuur.projekt.domain.patientContactInfo.PatientContactInfoMapper;
-import ee.digiregistratuur.projekt.domain.patientContactInfo.PatientContactInfoService;
+import ee.digiregistratuur.projekt.domain.patientcontactinfo.PatientContactInfo;
+import ee.digiregistratuur.projekt.domain.patientcontactinfo.PatientContactInfoMapper;
+import ee.digiregistratuur.projekt.domain.patientcontactinfo.PatientContactInfoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

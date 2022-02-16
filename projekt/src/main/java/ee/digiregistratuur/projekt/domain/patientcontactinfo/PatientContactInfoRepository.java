@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.domain.patientContactInfo;
+package ee.digiregistratuur.projekt.domain.patientcontactinfo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.domain.patientContactInfo;
+package ee.digiregistratuur.projekt.domain.patientcontactinfo;
 
 import ee.digiregistratuur.projekt.domain.patient.PatientDto;
 import lombok.Data;
