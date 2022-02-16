@@ -1,6 +1,6 @@
-package ee.digiregistratuur.projekt.PatientContactInfo;
+package ee.digiregistratuur.projekt.domain.patientContactInfo;
 
-import ee.digiregistratuur.projekt.patient.Patient;
+import ee.digiregistratuur.projekt.domain.patient.Patient;
 import lombok.Getter;
 import lombok.Setter;
 

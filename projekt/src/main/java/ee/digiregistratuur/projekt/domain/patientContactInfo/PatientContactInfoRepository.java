@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.PatientContactInfo;
+package ee.digiregistratuur.projekt.domain.patientContactInfo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -6,5 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface PatientContactInfoRepository extends JpaRepository<PatientContactInfo, Integer> {
     @Query("select p from PatientContactInfo p where p.patient.idCode = ?1")
     PatientContactInfo findByPatientIdCode(String idCode);
+
+
 
 }

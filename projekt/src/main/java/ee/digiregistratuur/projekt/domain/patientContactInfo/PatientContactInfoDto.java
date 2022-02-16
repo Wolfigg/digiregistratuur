@@ -1,6 +1,6 @@
-package ee.digiregistratuur.projekt.PatientContactInfo;
+package ee.digiregistratuur.projekt.domain.patientContactInfo;
 
-import ee.digiregistratuur.projekt.patient.PatientDto;
+import ee.digiregistratuur.projekt.domain.patient.PatientDto;
 import lombok.Data;
 
 import java.io.Serializable;

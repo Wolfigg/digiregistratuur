@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.patient;
+package ee.digiregistratuur.projekt.domain.patient;
 
 import lombok.Data;
 
