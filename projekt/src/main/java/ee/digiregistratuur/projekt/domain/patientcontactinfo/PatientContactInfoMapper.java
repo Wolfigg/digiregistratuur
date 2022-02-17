@@ -1,6 +1,6 @@
 package ee.digiregistratuur.projekt.domain.patientcontactinfo;
 
-import ee.digiregistratuur.projekt.service.login.ContactInfoResponse;
+import ee.digiregistratuur.projekt.service.login.LogInResponse;
 import ee.digiregistratuur.projekt.service.updatecontact.UpdateContactRequest;
 import org.mapstruct.*;
 
@@ -14,7 +14,7 @@ public interface PatientContactInfoMapper {
     void updateFromRequestToEntity(UpdateContactRequest request, @MappingTarget PatientContactInfo entity);
 
     @Mapping(target = "idCode", source = "patient.idCode")
-    ContactInfoResponse mapInfoToResponse(PatientContactInfo info);
+    LogInResponse mapInfoToResponse(PatientContactInfo info);
 
 }
 

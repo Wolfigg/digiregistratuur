@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 @Service
-public class ContactInfoService {
+public class LogInService {
 
     @Resource
     private PatientContactInfoService patientContactInfoService;
@@ -16,9 +16,9 @@ public class ContactInfoService {
     @Resource
     private PatientContactInfoMapper patientContactInfoMapper;
 
-    public ContactInfoResponse getContactInfoByIdCode(String idCode) {
+    public LogInResponse logInByIdCode(String idCode) {
         PatientContactInfo contactInfo = patientContactInfoService.findPatientContactInfoById(idCode);
-        ContactInfoResponse response = patientContactInfoMapper.mapInfoToResponse(contactInfo);
+        LogInResponse response = patientContactInfoMapper.mapInfoToResponse(contactInfo);
         return response;
     }
 }
