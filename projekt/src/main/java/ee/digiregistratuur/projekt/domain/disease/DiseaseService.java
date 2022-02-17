@@ -16,7 +16,7 @@ public class DiseaseService {
 
     public List<DiseaseResponse> getDiseaseList() {
         List<Disease> diseases = diseaseRepository.findAll();
-        List <DiseaseResponse> responses = diseaseMapper.diseaseToDiseaseResponse(diseases);
+        List <DiseaseResponse> responses = diseaseMapper.diseasesToDiseaseResponses(diseases);
         return responses;
     }
 }

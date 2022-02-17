@@ -16,7 +16,10 @@ public interface DiseaseMapper {
 
     Disease diseaseResponseToDisease(DiseaseResponse diseaseResponse);
 
-    List<DiseaseResponse> diseaseToDiseaseResponse(List<Disease> disease);
+    @Mapping(target = "diseaseId", source = "id")
+    DiseaseResponse toDiseaseResponse(Disease disease);
+
+    List<DiseaseResponse> diseasesToDiseaseResponses(List<Disease> disease);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updateDiseaseFromDiseaseResponse(DiseaseResponse diseaseResponse, @MappingTarget Disease disease);

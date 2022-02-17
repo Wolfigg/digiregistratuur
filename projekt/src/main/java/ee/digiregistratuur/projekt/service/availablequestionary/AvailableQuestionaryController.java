@@ -1,6 +1,6 @@
-package ee.digiregistratuur.projekt.service.availablequestionaires;
+package ee.digiregistratuur.projekt.service.availablequestionary;
 
-public class AvailableQuestionaireController {
+public class AvailableQuestionaryController {
 
     // TODO: Loo entity, repository, dto disease tabeli kohta
     // TODO: Loo selline teenus mis leiab ylesse koik voimalikud haigused (Get ilma sisendita)

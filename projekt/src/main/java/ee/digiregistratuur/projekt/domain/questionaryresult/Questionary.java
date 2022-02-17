@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.domain.questionaireresult;
+package ee.digiregistratuur.projekt.domain.questionaryresult;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "questionaire")
-public class Questionaire {
+public class Questionary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

@@ -1,4 +1,4 @@
-package ee.digiregistratuur.projekt.domain.questionaireresult;
+package ee.digiregistratuur.projekt.domain.questionaryresult;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "questionaire_result")
-public class QuestionaireResult {
+public class QuestionaryResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -17,7 +17,7 @@ public class QuestionaireResult {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "questionaire_id", nullable = false)
-    private Questionaire questionaire;
+    private Questionary questionary;
 
     @Column(name = "positive", nullable = false)
     private Boolean positive = false;
