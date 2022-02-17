@@ -21,10 +21,10 @@ public interface QuestionaryQuestionMapper {
 //    void updateQuestionaireQuestionFromQuestionaireQuestionResponse(QuestionaireQuestionResponse questionaireQuestionResponse, @MappingTarget QuestionaireQuestion questionaireQuestion);
 
 
-    @Mapping(target = "diseaseId", source = "disease.id")
-    QuestionaryQuestionResponse toQuestionsResponse(QuestionaryQuestion questions);
+    @Mapping(target = "questionId", source = "id")
+    QuestionDto toQuestionsResponse(QuestionaryQuestion questions);
 
-    List<QuestionaryQuestionResponse> toQuestionsResponses(List<QuestionaryQuestion> question);
+    List<QuestionDto> toQuestionsResponses(List<QuestionaryQuestion> question);
 
 }
 

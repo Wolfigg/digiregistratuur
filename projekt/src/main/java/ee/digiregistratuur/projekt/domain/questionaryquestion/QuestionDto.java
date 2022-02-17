@@ -5,7 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class QuestionaryQuestionResponse implements Serializable {
-    private final Integer diseaseId;
+public class QuestionDto implements Serializable {
+    private final Integer questionId;
     private final String question;
+    private final Boolean answer;
+
 }

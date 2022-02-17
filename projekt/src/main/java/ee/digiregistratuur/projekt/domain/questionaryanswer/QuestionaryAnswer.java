@@ -1,7 +1,7 @@
 package ee.digiregistratuur.projekt.domain.questionaryanswer;
 
+import ee.digiregistratuur.projekt.domain.questionary.Questionary;
 import ee.digiregistratuur.projekt.domain.questionaryquestion.QuestionaryQuestion;
-import ee.digiregistratuur.projekt.domain.questionaryresult.Questionary;
 import lombok.Getter;
 import lombok.Setter;
 

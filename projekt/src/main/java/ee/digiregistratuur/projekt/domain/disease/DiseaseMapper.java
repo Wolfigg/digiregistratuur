@@ -23,4 +23,11 @@ public interface DiseaseMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updateDiseaseFromDiseaseResponse(DiseaseResponse diseaseResponse, @MappingTarget Disease disease);
+
+    Disease diseaseRequestToDisease(DiseaseRequest diseaseRequest);
+
+    DiseaseRequest diseaseToDiseaseDtoRequest(Disease disease);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    void updateDiseaseFromDiseaseDtoRequest(DiseaseRequest diseaseRequest, @MappingTarget Disease disease);
 }

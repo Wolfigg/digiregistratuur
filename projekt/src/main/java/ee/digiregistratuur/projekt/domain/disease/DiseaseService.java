@@ -14,9 +14,15 @@ public class DiseaseService {
     @Resource
     private DiseaseMapper diseaseMapper;
 
+
     public List<DiseaseResponse> getDiseaseList() {
         List<Disease> diseases = diseaseRepository.findAll();
         List <DiseaseResponse> responses = diseaseMapper.diseasesToDiseaseResponses(diseases);
         return responses;
+    }
+
+    public void addNewDisease(DiseaseRequest diseaseRequest) {
+        Disease newDisease = diseaseMapper.diseaseRequestToDisease(diseaseRequest);
+        diseaseRepository.save(newDisease);
     }
 }
