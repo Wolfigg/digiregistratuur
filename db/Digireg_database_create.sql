@@ -1,5 +1,5 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-02-15 08:10:52.415
+-- Last modification date: 2022-02-15 09:04:39.515
 
 -- tables
 -- Table: disease
@@ -37,8 +37,8 @@ CREATE TABLE patient_disease (
     CONSTRAINT patient_disease_pk PRIMARY KEY (id)
 );
 
--- Table: questionaire
-CREATE TABLE questionaire (
+-- Table: questionary
+CREATE TABLE questionary (
     id serial  NOT NULL,
     date date  NOT NULL,
     patient_id int  NOT NULL,
@@ -74,8 +74,8 @@ CREATE TABLE questionaire_result (
 );
 
 -- foreign keys
--- Reference: kontaktandmed_isikuandmed (table: patient_contact_info)
-ALTER TABLE patient_contact_info ADD CONSTRAINT kontaktandmed_isikuandmed
+-- Reference: patient_contact_info_patient (table: patient_contact_info)
+ALTER TABLE patient_contact_info ADD CONSTRAINT patient_contact_info_patient
     FOREIGN KEY (patient_id)
     REFERENCES patient (id)  
     NOT DEFERRABLE 
@@ -101,7 +101,7 @@ ALTER TABLE patient_disease ADD CONSTRAINT patient_disease_patient
 -- Reference: questionaire_answer_questionaire (table: questionaire_answer)
 ALTER TABLE questionaire_answer ADD CONSTRAINT questionaire_answer_questionaire
     FOREIGN KEY (questionaire_id)
-    REFERENCES questionaire (id)  
+    REFERENCES questionary (id)
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
@@ -114,16 +114,16 @@ ALTER TABLE questionaire_answer ADD CONSTRAINT questionaire_answer_questionaire_
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_disease (table: questionaire)
-ALTER TABLE questionaire ADD CONSTRAINT questionaire_disease
+-- Reference: questionaire_disease (table: questionary)
+ALTER TABLE questionary ADD CONSTRAINT questionaire_disease
     FOREIGN KEY (disease_id)
     REFERENCES disease (id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_patient (table: questionaire)
-ALTER TABLE questionaire ADD CONSTRAINT questionaire_patient
+-- Reference: questionaire_patient (table: questionary)
+ALTER TABLE questionary ADD CONSTRAINT questionaire_patient
     FOREIGN KEY (patient_id)
     REFERENCES patient (id)  
     NOT DEFERRABLE 
@@ -141,7 +141,7 @@ ALTER TABLE questionaire_question ADD CONSTRAINT questionaire_question_disease
 -- Reference: test_result_questionaire (table: questionaire_result)
 ALTER TABLE questionaire_result ADD CONSTRAINT test_result_questionaire
     FOREIGN KEY (questionaire_id)
-    REFERENCES questionaire (id)  
+    REFERENCES questionary (id)
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
