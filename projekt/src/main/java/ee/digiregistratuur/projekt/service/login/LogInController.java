@@ -14,7 +14,7 @@ public class LogInController {
     private LogInService logInService;
 
     @GetMapping("/log/in")
-    @Operation(summary = "isikukoodi järgi sisselogimine")
+    @Operation(summary = "Isikukoodi järgi sisselogimine")
     public LogInResponse logInByIdCode(@RequestParam String idCode) {
         LogInResponse response = logInService.logInByIdCode(idCode);
         return response;

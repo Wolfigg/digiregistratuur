@@ -29,10 +29,10 @@ public class QuestionaryQuestionService {
     @Resource
     private DiseaseRepository diseaseRepository;
 
-    public DiseaseQuestionaryResponse getAllQuestionsByDiseaseId(Integer diseaseId, Integer patientId) {
+
+    public ResponseByDisease getAllQuestionsByDiseaseId(Integer diseaseId, Integer patientId) {
         Disease disease = diseaseRepository.getById(diseaseId);
         Patient patient = patientRepository.getById(patientId);
-
 
         Questionary questionary = new Questionary();
         questionary.setDisease(disease);
@@ -41,16 +41,20 @@ public class QuestionaryQuestionService {
         questionary.setDate(LocalDate.now());
         questionaryRepository.save(questionary);
 
-
-
         List<QuestionaryQuestion> questions = questionaryQuestionRepository.findByDiseaseId(diseaseId);
         List<QuestionDto> questionDtos = questionaryQuestionMapper.toQuestionsResponses(questions);
 
-        DiseaseQuestionaryResponse response = new DiseaseQuestionaryResponse();
+        ResponseByDisease response = new ResponseByDisease();
         response.setQuestionaryId(questionary.getId());
         response.setQuestionDtos(questionDtos);
 
-
         return response;
+    }
+
+
+
+    public void addNewQuestion(RequestAddQuestion requestAddQuestion) { //ei tööta
+        QuestionaryQuestion newQuestionaryQuestion = questionaryQuestionMapper.questionDtoToQuestion(requestAddQuestion);
+        questionaryQuestionRepository.save(newQuestionaryQuestion);
     }
 }

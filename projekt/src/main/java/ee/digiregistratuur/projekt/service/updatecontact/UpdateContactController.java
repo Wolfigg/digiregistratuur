@@ -15,10 +15,9 @@ public class UpdateContactController {
     private UpdateContactService updateContactService;
 
     @PutMapping("/update/contact/info/by/id/code")
-    @Operation(summary = "Uuendab kontkatinfo isikukoodi järgi")
+    @Operation(summary = "Uuendab kontaktinfo isikukoodi järgi")
     public void updateContactById(@RequestParam String idCode,
                                   @RequestBody UpdateContactRequest updateRequest) {
         updateContactService.updateContactById(idCode, updateRequest);
-
     }
 }

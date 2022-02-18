@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class DiseaseQuestionaryResponse {
+public class ResponseByDisease {
     private Integer questionaryId;
     private List<QuestionDto> questionDtos;
 

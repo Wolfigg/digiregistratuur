@@ -16,17 +16,14 @@ public class QuestionaryQuestionController {
 
     @GetMapping("/get/all/by/disease/id")
     @Operation(summary = "Leiab kõik küsimustiku küsimused haiguse id järgi")
-    public DiseaseQuestionaryResponse createQuestionaryByDiseaseId(@RequestParam Integer diseaseId,
-                                                                   @RequestParam Integer patientId) {
-
+    public ResponseByDisease createQuestionaryByDiseaseId(@RequestParam Integer diseaseId,
+                                                          @RequestParam Integer patientId) {
         return questionaryQuestionService.getAllQuestionsByDiseaseId(diseaseId, patientId);
     }
 
-
-
-//    @PutMapping("/add/new/question")
-//    @Operation(summary = "Lisab küsimustikku uue küsimuse")
-//    public void addNewQuestion (@RequestParam Integer diseaseId) {
-//        questionaryQuestionService.addNewQuestion
-//    }
+    @PostMapping("/add/new/question") //ei ole vajalik, aga ei toimi
+    @Operation(summary = "Lisab küsimustikku uue küsimuse")
+    public void addNewQuestionByDiseaseId(@RequestParam RequestAddQuestion requestAddQuestion) {
+        questionaryQuestionService.addNewQuestion(requestAddQuestion);
+    }
 }

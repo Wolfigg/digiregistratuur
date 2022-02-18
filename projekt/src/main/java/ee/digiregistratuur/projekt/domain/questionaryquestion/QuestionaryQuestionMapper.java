@@ -6,9 +6,9 @@ import java.util.List;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface QuestionaryQuestionMapper {
-//    QuestionaireQuestion questionaireQuestionDtoToQuestionaireQuestion(QuestionaireQuestionDto questionaireQuestionDto);
+
 //
-//    QuestionaireQuestionDto questionaireQuestionToQuestionaireQuestionDto(QuestionaireQuestion questionaireQuestion);
+//    QuestionaireQuestionDto questionaireQuestionToQuestionaireQuestionDto(QuestionaryQuestion questionaryQuestion);
 //
 //    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 //    void updateQuestionaireQuestionFromQuestionaireQuestionDto(QuestionaireQuestionDto questionaireQuestionDto, @MappingTarget QuestionaireQuestion questionaireQuestion);
@@ -26,5 +26,6 @@ public interface QuestionaryQuestionMapper {
 
     List<QuestionDto> toQuestionsResponses(List<QuestionaryQuestion> question);
 
+    QuestionaryQuestion questionDtoToQuestion(RequestAddQuestion requestAddQuestion);
 }
 
