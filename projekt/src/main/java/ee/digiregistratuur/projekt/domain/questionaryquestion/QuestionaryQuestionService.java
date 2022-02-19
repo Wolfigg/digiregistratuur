@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.annotation.Resource;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class QuestionaryQuestionService {
@@ -61,5 +62,9 @@ public class QuestionaryQuestionService {
         questionaryQuestionRepository.save(newQuestion);
     }
 
+
+    public void deleteQuestion(Integer id) {
+        questionaryQuestionRepository.deleteById(id);
+    }
 
 }

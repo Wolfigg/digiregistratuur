@@ -26,9 +26,6 @@ public interface QuestionaryQuestionMapper {
 
     List<QuestionDto> toQuestionsResponses(List<QuestionaryQuestion> question);
 
-    QuestionaryQuestion toQuestionaryQuestion(QuestionDto questionDto);
-
-
 
 
 }

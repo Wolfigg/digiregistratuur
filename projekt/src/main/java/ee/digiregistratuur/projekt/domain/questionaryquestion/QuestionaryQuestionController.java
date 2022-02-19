@@ -26,4 +26,11 @@ public class QuestionaryQuestionController {
     public void addNewQuestionByDiseaseId(@RequestParam Integer diseaseID, @RequestParam String question) {
         questionaryQuestionService.addNewQuestion(diseaseID, question);
     }
+
+    @DeleteMapping("/delete/question/by/id")
+    @Operation(summary =  "Kustutab kysimuse kysimuse id järgi")
+    public void deleteQuestionByQuestionId(@RequestParam Integer id) {
+        questionaryQuestionService.deleteQuestion(id);
+    }
+
 }
