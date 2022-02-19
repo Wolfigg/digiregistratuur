@@ -7,6 +7,7 @@ import ee.digiregistratuur.projekt.domain.patient.PatientRepository;
 import ee.digiregistratuur.projekt.domain.questionary.Questionary;
 import ee.digiregistratuur.projekt.domain.questionary.QuestionaryRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
@@ -52,9 +53,13 @@ public class QuestionaryQuestionService {
     }
 
 
-
-    public void addNewQuestion(RequestAddQuestion requestAddQuestion) { //ei tööta
-        QuestionaryQuestion newQuestionaryQuestion = questionaryQuestionMapper.questionDtoToQuestion(requestAddQuestion);
-        questionaryQuestionRepository.save(newQuestionaryQuestion);
+    public void addNewQuestion(Integer diseaseID, String question) {
+        Disease disease = diseaseRepository.getById(diseaseID);
+        QuestionaryQuestion newQuestion = new QuestionaryQuestion();
+        newQuestion.setQuestion(question);
+        newQuestion.setDisease(disease);
+        questionaryQuestionRepository.save(newQuestion);
     }
+
+
 }
