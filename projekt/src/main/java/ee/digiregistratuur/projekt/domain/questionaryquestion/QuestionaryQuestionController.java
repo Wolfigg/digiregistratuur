@@ -17,7 +17,7 @@ public class QuestionaryQuestionController {
     @GetMapping("/get/all/by/disease/id")
     @Operation(summary = "Leiab kõik küsimustiku küsimused haiguse id järgi")
     public ResponseByDisease getQuestionaryByDiseaseId(@RequestParam Integer diseaseId,
-                                                          @RequestParam Integer patientId) {
+                                                       @RequestParam Integer patientId) {
         return questionaryQuestionService.getAllQuestionsByDiseaseId(diseaseId, patientId);
     }
 
@@ -28,7 +28,7 @@ public class QuestionaryQuestionController {
     }
 
     @DeleteMapping("/delete/question/by/id")
-    @Operation(summary =  "Kustutab kysimuse kysimuse id järgi")
+    @Operation(summary = "Kustutab kysimuse kysimuse id järgi")
     public void deleteQuestionByQuestionId(@RequestParam Integer id) {
         questionaryQuestionService.deleteQuestion(id);
     }

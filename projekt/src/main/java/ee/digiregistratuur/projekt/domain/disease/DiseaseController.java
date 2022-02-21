@@ -24,4 +24,5 @@ public class DiseaseController {
     public void addNewDisease(@RequestBody DiseaseRequest diseaseRequest){
         diseaseService.addNewDisease(diseaseRequest);
     }
+
 }

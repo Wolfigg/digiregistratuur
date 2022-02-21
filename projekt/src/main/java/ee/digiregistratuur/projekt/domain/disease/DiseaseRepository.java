@@ -8,4 +8,5 @@ public interface DiseaseRepository extends JpaRepository<Disease, Integer> {
 
     @Override
     Optional<Disease> findById(Integer id);
+
 }

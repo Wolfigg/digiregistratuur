@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Table(name = "questionaire")
+@Table(name = "questionary")
 public class Questionary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,6 @@ public class Questionary {
     @JoinColumn(name = "disease_id", nullable = false)
     private Disease disease;
 
-    @Lob
     @Column(name = "status", nullable = false)
     private String status;
 

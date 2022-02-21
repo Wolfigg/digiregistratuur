@@ -43,34 +43,34 @@ CREATE TABLE questionary (
     date date  NOT NULL,
     patient_id int  NOT NULL,
     disease_id int  NOT NULL,
-    status varchar  NOT NULL,
-    CONSTRAINT questionaire_pk PRIMARY KEY (id)
+    status varchar(255)  NOT NULL,
+    CONSTRAINT questionary_pk PRIMARY KEY (id)
 );
 
--- Table: questionaire_answer
-CREATE TABLE questionaire_answer (
+-- Table: questionary_answer
+CREATE TABLE questionary_answer (
     id serial  NOT NULL,
     yes boolean  NULL,
-    questionaire_id int  NOT NULL,
-    questionaire_question_id int  NOT NULL,
-    CONSTRAINT questionaire_answer_pk PRIMARY KEY (id)
+    questionary_id int  NOT NULL,
+    questionary_question_id int  NOT NULL,
+    CONSTRAINT questionary_answer_pk PRIMARY KEY (id)
 );
 
--- Table: questionaire_question
-CREATE TABLE questionaire_question (
+-- Table: questionary_question
+CREATE TABLE questionary_question (
     id serial  NOT NULL,
     disease_id int  NOT NULL,
     question varchar(255)  NOT NULL,
-    CONSTRAINT questionaire_question_pk PRIMARY KEY (id)
+    CONSTRAINT questionary_question_pk PRIMARY KEY (id)
 );
 
--- Table: questionaire_result
-CREATE TABLE questionaire_result (
+-- Table: questionary_result
+CREATE TABLE questionary_result (
     id serial  NOT NULL,
-    questionaire_id int  NOT NULL,
+    questionary_id int  NOT NULL,
     positive boolean  NOT NULL,
-    comments varchar  NULL,
-    CONSTRAINT questionaire_result_pk PRIMARY KEY (id)
+    comments varchar(255)  NULL,
+    CONSTRAINT questionary_result_pk PRIMARY KEY (id)
 );
 
 -- foreign keys
@@ -98,49 +98,49 @@ ALTER TABLE patient_disease ADD CONSTRAINT patient_disease_patient
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_answer_questionaire (table: questionaire_answer)
-ALTER TABLE questionaire_answer ADD CONSTRAINT questionaire_answer_questionaire
-    FOREIGN KEY (questionaire_id)
+-- Reference: questionary_answer_questionary (table: questionary_answer)
+ALTER TABLE questionary_answer ADD CONSTRAINT questionary_answer_questionary
+    FOREIGN KEY (questionary_id)
     REFERENCES questionary (id)
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_answer_questionaire_question (table: questionaire_answer)
-ALTER TABLE questionaire_answer ADD CONSTRAINT questionaire_answer_questionaire_question
-    FOREIGN KEY (questionaire_question_id)
-    REFERENCES questionaire_question (id)  
+-- Reference: questionary_answer_questionary_question (table: questionary_answer)
+ALTER TABLE questionary_answer ADD CONSTRAINT questionary_answer_questionary_question
+    FOREIGN KEY (questionary_question_id)
+    REFERENCES questionary_question (id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_disease (table: questionary)
-ALTER TABLE questionary ADD CONSTRAINT questionaire_disease
+-- Reference: questionary_disease (table: questionary)
+ALTER TABLE questionary ADD CONSTRAINT questionary_disease
     FOREIGN KEY (disease_id)
     REFERENCES disease (id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_patient (table: questionary)
-ALTER TABLE questionary ADD CONSTRAINT questionaire_patient
+-- Reference: questionary_patient (table: questionary)
+ALTER TABLE questionary ADD CONSTRAINT questionary_patient
     FOREIGN KEY (patient_id)
     REFERENCES patient (id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
 
--- Reference: questionaire_question_disease (table: questionaire_question)
-ALTER TABLE questionaire_question ADD CONSTRAINT questionaire_question_disease
+-- Reference: questionary_question_disease (table: questionary_question)
+ALTER TABLE questionary_question ADD CONSTRAINT questionary_question_disease
     FOREIGN KEY (disease_id)
     REFERENCES disease (id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
 
--- Reference: test_result_questionaire (table: questionaire_result)
-ALTER TABLE questionaire_result ADD CONSTRAINT test_result_questionaire
-    FOREIGN KEY (questionaire_id)
+-- Reference: test_result_questionary (table: questionary_result)
+ALTER TABLE questionary_result ADD CONSTRAINT test_result_questionary
+    FOREIGN KEY (questionary_id)
     REFERENCES questionary (id)
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE

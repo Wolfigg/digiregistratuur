@@ -14,23 +14,24 @@ INSERT INTO public.disease (id, name, description) VALUES (DEFAULT, 'aids', 'Oma
 
 INSERT INTO public.patient_disease (id, patient_id, disease_id) VALUES (DEFAULT, 1, 1);
 
-INSERT INTO public.questionaire (id, date, patient_id, disease_id, status) VALUES (DEFAULT, '2022-02-15', 1, 1, 'pending');
+INSERT INTO public.questionary (id, date, patient_id, disease_id, status) VALUES (DEFAULT, '2022-02-15', 1, 1, 'pending');
+INSERT INTO public.questionary (id, date, patient_id, disease_id, status) VALUES (DEFAULT, '2022-02-15', 1, 2, 'pending');
 
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 1, 'palavik');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 1, 'köha');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 1, 'peavalu');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 1, 'kõhulahtisus');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 2, 'palavik');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 2, 'väsimus');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 2, 'nohu');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 2, 'oksendamine');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 3, 'palavik');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 3, 'suurenenud lümfisõlmed');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 3, 'lööve');
-INSERT INTO public.questionaire_question (id, disease_id, question) VALUES (DEFAULT, 3, 'väsimus');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 1, 'palavik');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 1, 'köha');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 1, 'peavalu');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 1, 'kõhulahtisus');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 2, 'palavik');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 2, 'väsimus');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 2, 'nohu');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 2, 'oksendamine');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 3, 'palavik');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 3, 'suurenenud lümfisõlmed');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 3, 'lööve');
+INSERT INTO public.questionary_question (id, disease_id, question) VALUES (DEFAULT, 3, 'väsimus');
 
-INSERT INTO public.questionaire_answer (id, yes, questionaire_id, questionaire_question_id) VALUES (DEFAULT, true, 2, 1);
-INSERT INTO public.questionaire_answer (id, yes, questionaire_id, questionaire_question_id) VALUES (DEFAULT, true, 2, 2);
-INSERT INTO public.questionaire_answer (id, yes, questionaire_id, questionaire_question_id) VALUES (DEFAULT, true, 2, 3);
+INSERT INTO public.questionary_answer (id, yes, questionary_id, questionary_question_id) VALUES (DEFAULT, true, 2, 1);
+INSERT INTO public.questionary_answer (id, yes, questionary_id, questionary_question_id) VALUES (DEFAULT, true, 2, 2);
+INSERT INTO public.questionary_answer (id, yes, questionary_id, questionary_question_id) VALUES (DEFAULT, true, 2, 3);
 
-INSERT INTO public.questionaire_result (id, questionaire_id, positive, comments) VALUES (DEFAULT, 2, true, 'võta ühendust perearstiga');
+INSERT INTO public.questionary_result (id, questionary_id, positive, comments) VALUES (DEFAULT, 2, true, 'võta ühendust perearstiga');

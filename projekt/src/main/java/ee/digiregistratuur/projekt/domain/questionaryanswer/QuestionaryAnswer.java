@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "questionaire_answer")
+@Table(name = "questionary_answer")
 public class QuestionaryAnswer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,11 +21,11 @@ public class QuestionaryAnswer {
     private Boolean yes;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "questionaire_id", nullable = false)
-    private Questionary questionaire;
+    @JoinColumn(name = "questionary_id", nullable = false)
+    private Questionary questionary;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "questionaire_question_id", nullable = false)
-    private QuestionaryQuestion questionaireQuestion;
+    @JoinColumn(name = "questionary_question_id", nullable = false)
+    private QuestionaryQuestion questionaryQuestion;
 
 }

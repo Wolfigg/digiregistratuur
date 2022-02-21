@@ -23,7 +23,6 @@ public class QuestionaryResult {
     @Column(name = "positive", nullable = false)
     private Boolean positive = false;
 
-    @Lob
     @Column(name = "comments")
     private String comments;
 

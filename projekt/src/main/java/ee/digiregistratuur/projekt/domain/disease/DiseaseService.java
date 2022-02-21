@@ -25,4 +25,5 @@ public class DiseaseService {
         Disease newDisease = diseaseMapper.diseaseRequestToDisease(diseaseRequest);
         diseaseRepository.save(newDisease);
     }
+
 }
