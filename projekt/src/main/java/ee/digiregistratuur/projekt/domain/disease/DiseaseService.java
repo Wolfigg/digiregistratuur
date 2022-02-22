@@ -1,5 +1,7 @@
 package ee.digiregistratuur.projekt.domain.disease;
 
+import ee.digiregistratuur.projekt.domain.questionaryquestion.QuestionaryQuestion;
+import ee.digiregistratuur.projekt.domain.questionaryquestion.QuestionaryQuestionRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,10 +16,13 @@ public class DiseaseService {
     @Resource
     private DiseaseMapper diseaseMapper;
 
+    @Resource
+    QuestionaryQuestionRepository questionaryQuestionRepository;
+
 
     public List<DiseaseResponse> getDiseaseList() {
         List<Disease> diseases = diseaseRepository.findAll();
-        List <DiseaseResponse> responses = diseaseMapper.diseasesToDiseaseResponses(diseases);
+        List<DiseaseResponse> responses = diseaseMapper.diseasesToDiseaseResponses(diseases);
         return responses;
     }
 
@@ -26,4 +31,8 @@ public class DiseaseService {
         diseaseRepository.save(newDisease);
     }
 
+    public void deleteDisease(Integer id) {
+        List<QuestionaryQuestion> questionsByDiseaseId = questionaryQuestionRepository.findQuestionsByDiseaseId(id);
+
+    }
 }

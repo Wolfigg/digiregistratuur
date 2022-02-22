@@ -10,7 +10,7 @@ INSERT INTO public.patient_contact_info (id, patient_id, first_name, last_name, 
 
 INSERT INTO public.disease (id, name, description) VALUES (DEFAULT, 'covid-19', 'COVID-19 on ägeda raskekujulise respiratoorse sündroomiga nakkushaigus. Enamikul juhtudest kulgeb haigus kergemate külmetushaigusele iseloomulike sümptomitega, kuid viirus võib põhjustada ka hingamisraskuseid ja kopsupõletikku.');
 INSERT INTO public.disease (id, name, description) VALUES (DEFAULT, 'gripp', 'Gripp on äge viiruslik haigus. Gripp levib puhangute, epideemia ja pandeemiana. Kõige enam haigestuvad grippi lapsed, kuid hospitaliseerimised ja surmajuhud tekivad peamiselt  eakate, krooniliste haigustega inimeste hulgas.');
-INSERT INTO public.disease (id, name, description) VALUES (DEFAULT, 'aids', 'Omandatud immuunpuudulikkuse sündroom (AIDS) muutus arstide ja teadlaste huviobjektiks 1981. aastal Ameerika Ühendriikides, mil esmakordselt diagnoositi inimestel raku-immuunsuse puudulikkusega kulgev haigus.');
+INSERT INTO public.disease (id, name, description) VALUES (DEFAULT, 'aids', 'Sümptomid: lümfisõlmede suurenemine, tugev öine higistamine, pikaaegne palavik, köha, tugev kaalulangus, pikaaegne piinav kõhulahtisus, nõrkus.');
 
 INSERT INTO public.patient_disease (id, patient_id, disease_id) VALUES (DEFAULT, 1, 1);
 

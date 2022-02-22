@@ -21,8 +21,13 @@ public class DiseaseController {
 
     @PostMapping("/add/new")
     @Operation(summary = "Lisab uue haiguse")
-    public void addNewDisease(@RequestBody DiseaseRequest diseaseRequest){
+    public void addNewDisease(@RequestBody DiseaseRequest diseaseRequest) {
         diseaseService.addNewDisease(diseaseRequest);
     }
 
+    @DeleteMapping("/delete/by/disease/id")
+    @Operation(summary = "Kustutab haiguse id järgi")
+    public void deleteDisease(@RequestBody Integer id){
+        diseaseService.deleteDisease(id);
+    }
 }

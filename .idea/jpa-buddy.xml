@@ -3,6 +3,6 @@
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
     <option name="reverseEngineeringLastDbConnectionId" value="2cbb7053-210f-45e6-a5e5-797f737fd142" />
-    <option name="reLastEntityCreationPackage" value="projekt/src/main/java/ee/digiregistratuur/projekt/domain/questionary" />
+    <option name="reLastEntityCreationPackage" value="projekt/src/main/java/ee/digiregistratuur/projekt/domain/role" />
   </component>
 </project>

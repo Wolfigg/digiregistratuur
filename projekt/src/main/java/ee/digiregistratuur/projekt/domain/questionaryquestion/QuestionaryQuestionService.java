@@ -39,7 +39,7 @@ public class QuestionaryQuestionService {
         Questionary questionary = new Questionary();
         questionary.setDisease(disease);
         questionary.setPatient(patient);
-        questionary.setStatus("pending2");
+        questionary.setStatus("pending");
         questionary.setDate(LocalDate.now());
         questionaryRepository.save(questionary);
 

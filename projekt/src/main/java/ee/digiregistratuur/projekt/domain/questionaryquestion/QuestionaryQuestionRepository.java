@@ -16,5 +16,12 @@ public interface QuestionaryQuestionRepository extends JpaRepository<Questionary
     @Override
     void deleteById(Integer integer);
 
+    @Query("select q from QuestionaryQuestion q where q.disease.id = ?1")
+    List<QuestionaryQuestion> findQuestionsByDiseaseId(Integer id);
+
+
+
+
+
 
 }
