@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 @Data
 public class LogInResponse implements Serializable {
+    private final Integer patientId;
     private final String idCode;
     private final String firstName;
     private final String lastName;

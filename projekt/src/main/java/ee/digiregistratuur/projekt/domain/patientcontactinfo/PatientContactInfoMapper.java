@@ -14,6 +14,7 @@ public interface PatientContactInfoMapper {
     void updateFromRequestToEntity(UpdateContactRequest request, @MappingTarget PatientContactInfo entity);
 
     @Mapping(target = "idCode", source = "patient.idCode")
+    @Mapping(target = "patientId", source = "patient.id")
     LogInResponse mapInfoToResponse(PatientContactInfo info);
 
 }
