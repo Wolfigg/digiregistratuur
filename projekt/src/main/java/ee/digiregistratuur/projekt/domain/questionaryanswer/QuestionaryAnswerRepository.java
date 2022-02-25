@@ -9,5 +9,12 @@ public interface QuestionaryAnswerRepository extends JpaRepository<QuestionaryAn
     @Query("select q from QuestionaryAnswer q where q.questionary.id = ?1")
     List<QuestionaryAnswer> findByQuestionaryId(Integer id);
 
+    @Query("select q from QuestionaryAnswer q where q.questionaryQuestion.id = ?1")
+    QuestionaryAnswer findByQuestionaryQuestionId(Integer id);
+
+
+
+
+
 
 }

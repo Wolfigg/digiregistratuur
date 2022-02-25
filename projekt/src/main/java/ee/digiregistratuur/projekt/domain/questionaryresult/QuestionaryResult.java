@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "questionaire_result")
+@Table(name = "questionary_result")
 public class QuestionaryResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class QuestionaryResult {
     private Integer id;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "questionaire_id", nullable = false)
+    @JoinColumn(name = "questionary_id", nullable = false)
     private Questionary questionary;
 
     @Column(name = "positive", nullable = false)
