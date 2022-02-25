@@ -1,6 +1,5 @@
 package ee.digiregistratuur.projekt.domain.disease;
 
-import ee.digiregistratuur.projekt.domain.questionaryquestion.QuestionaryQuestion;
 import ee.digiregistratuur.projekt.domain.questionaryquestion.QuestionaryQuestionRepository;
 import org.springframework.stereotype.Service;
 
@@ -31,8 +30,8 @@ public class DiseaseService {
         diseaseRepository.save(newDisease);
     }
 
-    public void deleteDisease(Integer id) {
-        List<QuestionaryQuestion> questionsByDiseaseId = questionaryQuestionRepository.findQuestionsByDiseaseId(id);
-
-    }
+//    public void deleteDisease(Integer id) {
+//        List<QuestionaryQuestion> questionsByDiseaseId = questionaryQuestionRepository.findQuestionsByDiseaseId(id);
+//
+//    }
 }

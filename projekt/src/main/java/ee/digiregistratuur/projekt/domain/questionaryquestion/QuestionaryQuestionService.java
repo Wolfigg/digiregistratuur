@@ -7,12 +7,10 @@ import ee.digiregistratuur.projekt.domain.patient.PatientRepository;
 import ee.digiregistratuur.projekt.domain.questionary.Questionary;
 import ee.digiregistratuur.projekt.domain.questionary.QuestionaryRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class QuestionaryQuestionService {

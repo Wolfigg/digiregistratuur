@@ -22,9 +22,13 @@ public interface QuestionaryQuestionMapper {
 
 
     @Mapping(target = "questionId", source = "id")
+    @Mapping(target = "answer", constant = "false")
     QuestionDto toQuestionsResponse(QuestionaryQuestion questions);
 
     List<QuestionDto> toQuestionsResponses(List<QuestionaryQuestion> question);
+
+
+    List<QuestionaryQuestion> toQuestionaryQuestions(List<QuestionDto> questionDto);
 
 
 

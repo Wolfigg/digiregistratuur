@@ -25,9 +25,9 @@ public class DiseaseController {
         diseaseService.addNewDisease(diseaseRequest);
     }
 
-    @DeleteMapping("/delete/by/disease/id") //pooleli
-    @Operation(summary = "Kustutab haiguse id järgi")
-    public void deleteDisease(@RequestBody Integer id){
-        diseaseService.deleteDisease(id);
-    }
+//    @DeleteMapping("/delete/by/disease/id") //pooleli
+//    @Operation(summary = "Kustutab haiguse id järgi")
+//    public void deleteDisease(@RequestBody Integer id){
+//        diseaseService.deleteDisease(id);
+//    }
 }
